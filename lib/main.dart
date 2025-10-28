@@ -21,9 +21,9 @@ void main() async {
     print('📡 Initializing Supabase...');
     // Initialize Supabase
     await Supabase.initialize(
-      url: 'https://pcqfdxgajkojuffiiykt.supabase.co',
+      url: '',
       anonKey:
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBjcWZkeGdhamtvanVmZmlpeWt0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA4NzYyMzYsImV4cCI6MjA3NjQ1MjIzNn0.lf0e9v-qyOXPa_GQPsBRbyMH_VfcNJS2oash49RD_ik',
+          '',
     );
     print('✅ Supabase initialized successfully');
 

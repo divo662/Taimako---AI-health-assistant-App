@@ -14,9 +14,9 @@ class HederaService {
       'https://testnet.mirrornode.hedera.com/api/v1'; // or mainnet URL
   static const String hederaHcsTopicId =
       'YOUR_HCS_TOPIC_ID'; // Your HCS topic ID
-  static const String hederaAccountId = '0.0.7096886';
+  static const String hederaAccountId = '';
   static const String hederaPrivateKey =
-      '0xac343b146023f324792a04c317db6d0e3d9c422cbd0f0b1c1e5257f196f5067d';
+      '';
 
   // For MVP, we'll use a simplified approach with HTTP API calls
   // In production, you'd use the Hedera SDK for more robust integration
@@ -38,7 +38,7 @@ class HederaService {
         headers: {
           'Content-Type': 'application/json',
           'Authorization':
-              'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBjcWZkeGdhamtvanVmZmlpeWt0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA4NzYyMzYsImV4cCI6MjA3NjQ1MjIzNn0.lf0e9v-qyOXPa_GQPsBRbyMH_VfcNJS2oash49RD_ik',
+              '',
         },
         body: json.encode({
           'user_id': userId,
