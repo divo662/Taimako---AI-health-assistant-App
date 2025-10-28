@@ -1,0 +1,616 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2025-01-19",
+    "description": "Nigerian Medical Symptom-Illness Dataset for Taimako AI",
+    "total_conditions": 45,
+    "regions_covered": ["Nigeria", "West Africa"],
+    "data_sources": ["NCDC", "WHO Nigeria", "Medical Literature", "Clinical Guidelines"]
+  },
+  "conditions": [
+    {
+      "id": "malaria_001",
+      "name": "Malaria",
+      "icd10": "B50-B54",
+      "prevalence": "high",
+      "severity": "moderate_to_high",
+      "symptoms": [
+        "fever",
+        "chills",
+        "headache",
+        "body_aches",
+        "fatigue",
+        "sweating",
+        "nausea",
+        "vomiting",
+        "diarrhea",
+        "muscle_pain",
+        "joint_pain"
+      ],
+      "primary_symptoms": ["fever", "chills", "headache"],
+      "duration_range": "3-14 days",
+      "age_groups": ["all"],
+      "seasonal_factors": ["rainy_season", "high_risk"],
+      "advice": "Rest, stay hydrated, take prescribed antimalarial medication. Seek medical attention if symptoms worsen or persist beyond 3 days.",
+      "urgency": "moderate",
+      "confidence_base": 0.85,
+      "risk_factors": ["mosquito_exposure", "travel_to_endemic_areas", "pregnancy"]
+    },
+    {
+      "id": "typhoid_002",
+      "name": "Typhoid Fever",
+      "icd10": "A01.0",
+      "prevalence": "high",
+      "severity": "moderate_to_high",
+      "symptoms": [
+        "fever",
+        "headache",
+        "abdominal_pain",
+        "constipation",
+        "diarrhea",
+        "loss_of_appetite",
+        "weakness",
+        "fatigue",
+        "rose_spots",
+        "enlarged_spleen"
+      ],
+      "primary_symptoms": ["fever", "abdominal_pain", "headache"],
+      "duration_range": "7-21 days",
+      "age_groups": ["all"],
+      "seasonal_factors": ["year_round"],
+      "advice": "Seek medical attention immediately. Typhoid requires antibiotic treatment. Maintain good hygiene and avoid contaminated food/water.",
+      "urgency": "high",
+      "confidence_base": 0.80,
+      "risk_factors": ["contaminated_food", "poor_sanitation", "travel"]
+    },
+    {
+      "id": "pneumonia_003",
+      "name": "Pneumonia",
+      "icd10": "J18",
+      "prevalence": "high",
+      "severity": "moderate_to_high",
+      "symptoms": [
+        "cough",
+        "chest_pain",
+        "shortness_of_breath",
+        "fever",
+        "chills",
+        "fatigue",
+        "sweating",
+        "nausea",
+        "vomiting",
+        "rapid_breathing",
+        "confusion"
+      ],
+      "primary_symptoms": ["cough", "chest_pain", "shortness_of_breath"],
+      "duration_range": "3-21 days",
+      "age_groups": ["all", "elderly_high_risk"],
+      "seasonal_factors": ["dry_season", "harmattan"],
+      "advice": "Seek medical attention immediately. Rest, stay hydrated, and avoid smoking. May require hospitalization for severe cases.",
+      "urgency": "high",
+      "confidence_base": 0.82,
+      "risk_factors": ["age_over_65", "smoking", "chronic_lung_disease", "weakened_immune_system"]
+    },
+    {
+      "id": "diarrhea_004",
+      "name": "Acute Diarrhea",
+      "icd10": "A09",
+      "prevalence": "very_high",
+      "severity": "mild_to_moderate",
+      "symptoms": [
+        "loose_stools",
+        "frequent_bowel_movements",
+        "abdominal_cramps",
+        "nausea",
+        "vomiting",
+        "fever",
+        "dehydration",
+        "weakness",
+        "thirst"
+      ],
+      "primary_symptoms": ["loose_stools", "abdominal_cramps"],
+      "duration_range": "1-7 days",
+      "age_groups": ["all", "children_high_risk"],
+      "seasonal_factors": ["year_round"],
+      "advice": "Stay hydrated with oral rehydration solution. Eat bland foods. Seek medical attention if symptoms persist or worsen, especially in children.",
+      "urgency": "moderate",
+      "confidence_base": 0.75,
+      "risk_factors": ["contaminated_food", "poor_hygiene", "travel"]
+    },
+    {
+      "id": "hypertension_005",
+      "name": "Hypertension",
+      "icd10": "I10",
+      "prevalence": "high",
+      "severity": "moderate_to_high",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "blurred_vision",
+        "chest_pain",
+        "shortness_of_breath",
+        "nosebleeds",
+        "fatigue",
+        "irregular_heartbeat"
+      ],
+      "primary_symptoms": ["headache", "dizziness"],
+      "duration_range": "chronic",
+      "age_groups": ["adults", "elderly"],
+      "seasonal_factors": ["year_round"],
+      "advice": "Monitor blood pressure regularly. Follow prescribed medication. Maintain healthy diet, exercise, and reduce salt intake. Regular medical checkups essential.",
+      "urgency": "moderate",
+      "confidence_base": 0.70,
+      "risk_factors": ["family_history", "obesity", "smoking", "high_salt_diet", "stress"]
+    },
+    {
+      "id": "diabetes_006",
+      "name": "Diabetes Mellitus",
+      "icd10": "E10-E14",
+      "prevalence": "increasing",
+      "severity": "moderate_to_high",
+      "symptoms": [
+        "excessive_thirst",
+        "frequent_urination",
+        "extreme_hunger",
+        "unexplained_weight_loss",
+        "fatigue",
+        "blurred_vision",
+        "slow_healing_wounds",
+        "frequent_infections"
+      ],
+      "primary_symptoms": ["excessive_thirst", "frequent_urination", "fatigue"],
+      "duration_range": "chronic",
+      "age_groups": ["adults", "elderly"],
+      "seasonal_factors": ["year_round"],
+      "advice": "Seek medical diagnosis immediately. Monitor blood sugar levels. Follow prescribed treatment plan including diet, exercise, and medication.",
+      "urgency": "high",
+      "confidence_base": 0.78,
+      "risk_factors": ["family_history", "obesity", "sedentary_lifestyle", "age_over_45"]
+    },
+    {
+      "id": "common_cold_007",
+      "name": "Common Cold",
+      "icd10": "J00",
+      "prevalence": "very_high",
+      "severity": "mild",
+      "symptoms": [
+        "runny_nose",
+        "sneezing",
+        "sore_throat",
+        "cough",
+        "congestion",
+        "mild_fever",
+        "headache",
+        "fatigue",
+        "body_aches"
+      ],
+      "primary_symptoms": ["runny_nose", "sneezing", "sore_throat"],
+      "duration_range": "3-10 days",
+      "age_groups": ["all"],
+      "seasonal_factors": ["harmattan", "rainy_season"],
+      "advice": "Rest, stay hydrated, use saline nasal drops. Symptoms usually resolve on their own. Seek medical attention if symptoms worsen or persist.",
+      "urgency": "low",
+      "confidence_base": 0.90,
+      "risk_factors": ["close_contact", "weakened_immune_system", "stress"]
+    },
+    {
+      "id": "flu_008",
+      "name": "Influenza (Flu)",
+      "icd10": "J10-J11",
+      "prevalence": "seasonal",
+      "severity": "moderate",
+      "symptoms": [
+        "fever",
+        "chills",
+        "muscle_aches",
+        "fatigue",
+        "headache",
+        "cough",
+        "sore_throat",
+        "runny_nose",
+        "nausea",
+        "vomiting"
+      ],
+      "primary_symptoms": ["fever", "muscle_aches", "fatigue"],
+      "duration_range": "5-14 days",
+      "age_groups": ["all"],
+      "seasonal_factors": ["harmattan", "dry_season"],
+      "advice": "Rest, stay hydrated, take fever reducers. Seek medical attention if symptoms are severe or persist. Consider annual flu vaccination.",
+      "urgency": "moderate",
+      "confidence_base": 0.85,
+      "risk_factors": ["age_over_65", "chronic_conditions", "pregnancy", "weakened_immune_system"]
+    },
+    {
+      "id": "meningitis_009",
+      "name": "Meningitis",
+      "icd10": "G03",
+      "prevalence": "moderate",
+      "severity": "high",
+      "symptoms": [
+        "severe_headache",
+        "fever",
+        "stiff_neck",
+        "nausea",
+        "vomiting",
+        "sensitivity_to_light",
+        "confusion",
+        "seizures",
+        "rash",
+        "drowsiness"
+      ],
+      "primary_symptoms": ["severe_headache", "fever", "stiff_neck"],
+      "duration_range": "1-14 days",
+      "age_groups": ["all", "children_high_risk"],
+      "seasonal_factors": ["dry_season", "harmattan"],
+      "advice": "MEDICAL EMERGENCY - Seek immediate medical attention. Meningitis can be life-threatening and requires urgent treatment.",
+      "urgency": "critical",
+      "confidence_base": 0.88,
+      "risk_factors": ["age_under_5", "age_over_65", "weakened_immune_system", "close_contact"]
+    },
+    {
+      "id": "tuberculosis_010",
+      "name": "Tuberculosis (TB)",
+      "icd10": "A15-A19",
+      "prevalence": "moderate",
+      "severity": "high",
+      "symptoms": [
+        "persistent_cough",
+        "coughing_blood",
+        "chest_pain",
+        "shortness_of_breath",
+        "fever",
+        "night_sweats",
+        "weight_loss",
+        "fatigue",
+        "loss_of_appetite"
+      ],
+      "primary_symptoms": ["persistent_cough", "coughing_blood", "weight_loss"],
+      "duration_range": "weeks_to_months",
+      "age_groups": ["all"],
+      "seasonal_factors": ["year_round"],
+      "advice": "Seek medical attention immediately. TB requires long-term antibiotic treatment. Complete the full course of medication as prescribed.",
+      "urgency": "high",
+      "confidence_base": 0.82,
+      "risk_factors": ["HIV_positive", "malnutrition", "overcrowding", "weakened_immune_system"]
+    },
+    {
+      "id": "hepatitis_011",
+      "name": "Hepatitis",
+      "icd10": "B15-B19",
+      "prevalence": "moderate",
+      "severity": "moderate_to_high",
+      "symptoms": [
+        "fatigue",
+        "abdominal_pain",
+        "jaundice",
+        "dark_urine",
+        "pale_stools",
+        "fever",
+        "nausea",
+        "vomiting",
+        "loss_of_appetite",
+        "joint_pain"
+      ],
+      "primary_symptoms": ["fatigue", "jaundice", "abdominal_pain"],
+      "duration_range": "2-6 months",
+      "age_groups": ["all"],
+      "seasonal_factors": ["year_round"],
+      "advice": "Seek medical attention immediately. Avoid alcohol and certain medications. Follow prescribed treatment plan. Practice safe hygiene.",
+      "urgency": "high",
+      "confidence_base": 0.80,
+      "risk_factors": ["contaminated_blood", "unprotected_sex", "sharing_needles", "travel"]
+    },
+    {
+      "id": "asthma_012",
+      "name": "Asthma",
+      "icd10": "J45",
+      "prevalence": "moderate",
+      "severity": "moderate",
+      "symptoms": [
+        "wheezing",
+        "shortness_of_breath",
+        "chest_tightness",
+        "coughing",
+        "difficulty_breathing",
+        "rapid_breathing",
+        "fatigue"
+      ],
+      "primary_symptoms": ["wheezing", "shortness_of_breath", "chest_tightness"],
+      "duration_range": "chronic_with_episodes",
+      "age_groups": ["all"],
+      "seasonal_factors": ["harmattan", "dusty_season"],
+      "advice": "Use prescribed inhaler as directed. Avoid triggers like dust, smoke, and allergens. Seek emergency care for severe attacks.",
+      "urgency": "moderate",
+      "confidence_base": 0.85,
+      "risk_factors": ["family_history", "allergies", "smoking", "air_pollution"]
+    },
+    {
+      "id": "anemia_013",
+      "name": "Iron Deficiency Anemia",
+      "icd10": "D50",
+      "prevalence": "high",
+      "severity": "mild_to_moderate",
+      "symptoms": [
+        "fatigue",
+        "weakness",
+        "pale_skin",
+        "shortness_of_breath",
+        "dizziness",
+        "headache",
+        "cold_hands_feet",
+        "brittle_nails",
+        "unusual_cravings"
+      ],
+      "primary_symptoms": ["fatigue", "weakness", "pale_skin"],
+      "duration_range": "chronic",
+      "age_groups": ["all", "women_high_risk"],
+      "seasonal_factors": ["year_round"],
+      "advice": "Increase iron-rich foods in diet. Take iron supplements as prescribed. Regular blood tests to monitor levels. Seek medical advice for severe cases.",
+      "urgency": "moderate",
+      "confidence_base": 0.75,
+      "risk_factors": ["heavy_menstrual_periods", "pregnancy", "poor_diet", "blood_loss"]
+    },
+    {
+      "id": "migraine_014",
+      "name": "Migraine",
+      "icd10": "G43",
+      "prevalence": "moderate",
+      "severity": "moderate_to_high",
+      "symptoms": [
+        "severe_headache",
+        "nausea",
+        "vomiting",
+        "sensitivity_to_light",
+        "sensitivity_to_sound",
+        "blurred_vision",
+        "dizziness",
+        "fatigue",
+        "mood_changes"
+      ],
+      "primary_symptoms": ["severe_headache", "nausea", "sensitivity_to_light"],
+      "duration_range": "4-72 hours",
+      "age_groups": ["adults", "women_high_risk"],
+      "seasonal_factors": ["year_round"],
+      "advice": "Rest in dark, quiet room. Use prescribed medication. Identify and avoid triggers. Keep a headache diary. Seek medical advice for frequent migraines.",
+      "urgency": "moderate",
+      "confidence_base": 0.80,
+      "risk_factors": ["family_history", "hormonal_changes", "stress", "certain_foods"]
+    },
+    {
+      "id": "gastritis_015",
+      "name": "Gastritis",
+      "icd10": "K29",
+      "prevalence": "moderate",
+      "severity": "mild_to_moderate",
+      "symptoms": [
+        "abdominal_pain",
+        "nausea",
+        "vomiting",
+        "loss_of_appetite",
+        "bloating",
+        "indigestion",
+        "heartburn",
+        "belching",
+        "feeling_full_quickly"
+      ],
+      "primary_symptoms": ["abdominal_pain", "nausea", "indigestion"],
+      "duration_range": "days_to_weeks",
+      "age_groups": ["all"],
+      "seasonal_factors": ["year_round"],
+      "advice": "Avoid spicy, acidic, and fatty foods. Eat smaller, frequent meals. Avoid alcohol and smoking. Take prescribed medication. Seek medical advice if symptoms persist.",
+      "urgency": "low",
+      "confidence_base": 0.70,
+      "risk_factors": ["alcohol_use", "smoking", "stress", "certain_medications", "bacterial_infection"]
+    },
+    {
+      "id": "urinary_tract_infection_016",
+      "name": "Urinary Tract Infection (UTI)",
+      "icd10": "N39.0",
+      "prevalence": "high",
+      "severity": "mild_to_moderate",
+      "symptoms": [
+        "burning_urination",
+        "frequent_urination",
+        "urgent_urination",
+        "cloudy_urine",
+        "blood_in_urine",
+        "pelvic_pain",
+        "fever",
+        "nausea",
+        "back_pain"
+      ],
+      "primary_symptoms": ["burning_urination", "frequent_urination", "cloudy_urine"],
+      "duration_range": "3-7 days",
+      "age_groups": ["all", "women_high_risk"],
+      "seasonal_factors": ["year_round"],
+      "advice": "Drink plenty of water. Take prescribed antibiotics. Avoid caffeine and alcohol. Seek medical attention if symptoms worsen or persist.",
+      "urgency": "moderate",
+      "confidence_base": 0.85,
+      "risk_factors": ["female_sex", "sexual_activity", "menopause", "diabetes", "catheter_use"]
+    },
+    {
+      "id": "conjunctivitis_017",
+      "name": "Conjunctivitis (Pink Eye)",
+      "icd10": "H10",
+      "prevalence": "moderate",
+      "severity": "mild",
+      "symptoms": [
+        "red_eyes",
+        "itchy_eyes",
+        "watery_eyes",
+        "discharge",
+        "swollen_eyelids",
+        "sensitivity_to_light",
+        "blurred_vision",
+        "gritty_feeling"
+      ],
+      "primary_symptoms": ["red_eyes", "itchy_eyes", "watery_eyes"],
+      "duration_range": "3-14 days",
+      "age_groups": ["all"],
+      "seasonal_factors": ["harmattan", "dusty_season"],
+      "advice": "Keep eyes clean and avoid touching. Use prescribed eye drops. Avoid sharing towels or makeup. Seek medical attention if symptoms worsen.",
+      "urgency": "low",
+      "confidence_base": 0.90,
+      "risk_factors": ["viral_infection", "bacterial_infection", "allergies", "contact_lens_use"]
+    },
+    {
+      "id": "skin_infection_018",
+      "name": "Skin Infection",
+      "icd10": "L08",
+      "prevalence": "moderate",
+      "severity": "mild_to_moderate",
+      "symptoms": [
+        "redness",
+        "swelling",
+        "warmth",
+        "pain",
+        "pus_discharge",
+        "fever",
+        "fatigue",
+        "enlarged_lymph_nodes",
+        "spreading_redness"
+      ],
+      "primary_symptoms": ["redness", "swelling", "warmth"],
+      "duration_range": "3-14 days",
+      "age_groups": ["all"],
+      "seasonal_factors": ["year_round"],
+      "advice": "Keep area clean and dry. Apply prescribed antibiotic cream. Seek medical attention if infection spreads or worsens. Avoid sharing personal items.",
+      "urgency": "moderate",
+      "confidence_base": 0.75,
+      "risk_factors": ["cuts_wounds", "poor_hygiene", "weakened_immune_system", "diabetes"]
+    },
+    {
+      "id": "dengue_019",
+      "name": "Dengue Fever",
+      "icd10": "A90",
+      "prevalence": "moderate",
+      "severity": "moderate_to_high",
+      "symptoms": [
+        "high_fever",
+        "severe_headache",
+        "eye_pain",
+        "muscle_joint_pain",
+        "nausea",
+        "vomiting",
+        "rash",
+        "mild_bleeding",
+        "fatigue"
+      ],
+      "primary_symptoms": ["high_fever", "severe_headache", "muscle_joint_pain"],
+      "duration_range": "3-10 days",
+      "age_groups": ["all"],
+      "seasonal_factors": ["rainy_season"],
+      "advice": "Rest, stay hydrated, take fever reducers. Avoid aspirin. Seek medical attention if symptoms worsen or signs of severe dengue appear.",
+      "urgency": "high",
+      "confidence_base": 0.80,
+      "risk_factors": ["mosquito_exposure", "travel_to_endemic_areas", "previous_dengue_infection"]
+    },
+    {
+      "id": "yellow_fever_020",
+      "name": "Yellow Fever",
+      "icd10": "A95",
+      "prevalence": "low",
+      "severity": "high",
+      "symptoms": [
+        "fever",
+        "headache",
+        "muscle_pain",
+        "nausea",
+        "vomiting",
+        "jaundice",
+        "abdominal_pain",
+        "bleeding",
+        "kidney_failure"
+      ],
+      "primary_symptoms": ["fever", "jaundice", "bleeding"],
+      "duration_range": "3-6 days",
+      "age_groups": ["all"],
+      "seasonal_factors": ["rainy_season"],
+      "advice": "MEDICAL EMERGENCY - Seek immediate medical attention. Yellow fever can be life-threatening. Vaccination is available and recommended for travelers.",
+      "urgency": "critical",
+      "confidence_base": 0.85,
+      "risk_factors": ["mosquito_exposure", "travel_to_endemic_areas", "unvaccinated"]
+    }
+  ],
+  "symptom_categories": {
+    "fever_symptoms": ["fever", "chills", "sweating", "high_fever"],
+    "respiratory_symptoms": ["cough", "shortness_of_breath", "chest_pain", "wheezing", "rapid_breathing"],
+    "gastrointestinal_symptoms": ["nausea", "vomiting", "diarrhea", "abdominal_pain", "loss_of_appetite"],
+    "neurological_symptoms": ["headache", "dizziness", "confusion", "seizures", "fatigue"],
+    "skin_symptoms": ["rash", "jaundice", "pale_skin", "redness", "swelling"],
+    "urinary_symptoms": ["frequent_urination", "burning_urination", "cloudy_urine", "blood_in_urine"],
+    "eye_symptoms": ["red_eyes", "itchy_eyes", "blurred_vision", "sensitivity_to_light"],
+    "musculoskeletal_symptoms": ["muscle_pain", "joint_pain", "body_aches", "weakness"]
+  },
+  "severity_levels": {
+    "mild": {
+      "description": "Symptoms are manageable, minimal impact on daily activities",
+      "urgency": "low",
+      "action": "Monitor symptoms, rest, home care"
+    },
+    "moderate": {
+      "description": "Symptoms affect daily activities, may need medical attention",
+      "urgency": "moderate", 
+      "action": "Seek medical advice, consider treatment"
+    },
+    "high": {
+      "description": "Symptoms significantly impact daily life, medical attention needed",
+      "urgency": "high",
+      "action": "Seek medical attention promptly"
+    },
+    "critical": {
+      "description": "Life-threatening symptoms, immediate medical attention required",
+      "urgency": "critical",
+      "action": "Emergency medical care needed immediately"
+    }
+  },
+  "seasonal_factors": {
+    "rainy_season": {
+      "months": ["April", "May", "June", "July", "August", "September", "October"],
+      "increased_risk": ["malaria", "dengue", "typhoid", "diarrhea"],
+      "description": "Higher risk of waterborne and mosquito-borne diseases"
+    },
+    "dry_season": {
+      "months": ["November", "December", "January", "February", "March"],
+      "increased_risk": ["pneumonia", "meningitis", "respiratory_infections"],
+      "description": "Higher risk of respiratory diseases due to dust and harmattan"
+    },
+    "harmattan": {
+      "months": ["December", "January", "February"],
+      "increased_risk": ["asthma", "conjunctivitis", "respiratory_infections"],
+      "description": "Dusty, dry winds increase respiratory and eye problems"
+    }
+  },
+  "age_group_risks": {
+    "infants_0_2": {
+      "high_risk": ["diarrhea", "pneumonia", "meningitis"],
+      "description": "Immune system still developing, higher risk of severe infections"
+    },
+    "children_2_12": {
+      "high_risk": ["malaria", "diarrhea", "common_cold", "conjunctivitis"],
+      "description": "Active lifestyle, exposure to infections"
+    },
+    "adolescents_13_19": {
+      "high_risk": ["acne", "migraine", "anemia"],
+      "description": "Hormonal changes, lifestyle factors"
+    },
+    "adults_20_64": {
+      "high_risk": ["hypertension", "diabetes", "tuberculosis", "hepatitis"],
+      "description": "Work stress, lifestyle diseases, chronic conditions"
+    },
+    "elderly_65_plus": {
+      "high_risk": ["pneumonia", "hypertension", "diabetes", "pneumonia"],
+      "description": "Weakened immune system, chronic conditions"
+    }
+  },
+  "gender_specific_risks": {
+    "female": {
+      "high_risk": ["anemia", "uti", "migraine", "thyroid_disorders"],
+      "description": "Hormonal factors, pregnancy-related conditions"
+    },
+    "male": {
+      "high_risk": ["hypertension", "heart_disease", "prostate_issues"],
+      "description": "Lifestyle factors, genetic predispositions"
+    }
+  }
+}

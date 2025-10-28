@@ -1,0 +1,22 @@
+{
+  "name": "taimako-hedera-setup",
+  "version": "1.0.0",
+  "description": "Hedera HCS Topic Creation Script for Taimako Health Assistant",
+  "main": "create-topic.js",
+  "scripts": {
+    "create-topic": "node create-topic.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@hashgraph/sdk": "^2.75.0"
+  },
+  "keywords": [
+    "hedera",
+    "hcs",
+    "blockchain",
+    "health",
+    "ai"
+  ],
+  "author": "Taimako Team",
+  "license": "MIT"
+}
